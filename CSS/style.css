@@ -1,77 +1,161 @@
-* {        /* Redefinir todas as margens e blocos para 0 */
+* {
+    /* Redefinir todas as margens e blocos para 0 */
     padding: 0;
-    margin: 0 ; 
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'oswald', sans-serif; 
+    font-family: 'oswald', sans-serif;
     max-width: 1440px;
+
     & .link {
-        text-decoration: none;  /* Remover sublinhado do link */
-        color: var(--primaria);     /* Cor do texto */
+        text-decoration: none;
+        /* Remover sublinhado do link */
+        color: var(--primaria);
+        /* Cor do texto */
     }
 }
-:root{      /* Definir variáveis para as cores */
-    --primaria: #000000;    /* Preto */
-    --secundaria: #0017E9;  /* Azul */
-    --terciaria: #FFFFFF;  /* Branco */
+
+:root {
+    /* Definir variáveis para as cores */
+    --primaria: #000000;
+    /* Preto */
+    --secundaria: #0017E9;
+    /* Azul */
+    --terciaria: #FFFFFF;
+    /* Branco */
 }
-header{     /* Estilizar o cabeçalho */
-    background: var(--terciaria);
+
+body {
     margin: 0 auto;
-
-    & #topo {
+    max-width: 1440px;
+    display: flex; 
+    flex-direction: column;
+    
+    & header {
+        /* Estilizar o cabeçalho */
+        background: var(--terciaria);
+        margin: 0 auto;
         width: 100%;
-        height: 120px;
-        display: flex;  /* Fazer com que os elementos fiquem lado a lado */
-        justify-content: space-between; /* Espaçamento entre os elementos */
-        gap: 20px;
-        flex-direction: row;    
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0 20px;
-        
+        height: 1024px;
 
-        & .logo {
-            width: 242px;
-            font-size: 40px ;
-            font-weight: 700;
-            top: 46px;
-            margin-left: 110px;
+        & #topo {
+            width: 100%;
+            height: 120px;
+            display: flex;  /* Fazer com que os elementos fiquem lado a lado */
+            justify-content: space-between;/* Espaçamento entre os elementos */
+            gap: 20px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 20px;
+
+
+            & .logo {
+                width: 242px;
+                font-size: 40px;
+                font-weight: 700;
+                top: 46px;
+                margin-left: 110px;
             }
-        }
 
-        & .navegacao {
-            display: flex;  
-            justify-content: flex-end;  /* Alinhar os elementos à direita */
-            flex: 1 2 60%;    /* Fazer com que o elemento ocupe todo o espaço disponível */
-
-            & ul {
-                display:flex;
+            & .navegacao {
+                display: flex;
                 justify-content: flex-end;
-                align-items: center;
-                & li {
+                /* Alinhar os elementos à direita */
+                flex: 1 2 60%;
+                /* Fazer com que o elemento ocupe todo o espaço disponível */
+
+                & ul {
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    list-style: none;
-                    margin: 0 20px;
-                    font-size: 20px;
-                    font-weight: 700;
-                    color: var(--primaria);
+
+                    & li {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        list-style: none;
+                        margin: 0 20px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: var(--primaria);
+                    }
                 }
+            }
+
+            & .botao {
+                /* Estilização do botão */
+                border: 3px solid var(--primaria);
+                /* Borda do botão */
+                padding: 10px 30px;
+                /* Espaçamento interno do botão */
+                font-size: 30px;
+                /* Tamanho da fonte */
+                font-weight: 700;
+                cursor: pointer;
+
+                display: flex;
+                flex: 0 1 70px;
+                /* Fazer com que o botão ocupe apenas o espaço necessário */
+                justify-content: flex-end;
             }
         }
 
-        & .botao {
-            
-            border: 3px solid var(--primaria);
-            padding: 10px 30px;
-            border-radius: 5px;
-            font-size: 30px;
-            font-weight: 700;
-            cursor: pointer;
-
+        & .banner {
+            /* Estilização do banner */
+            width: 100%;
+            height: 634px;
+            background: url('../IMG/background.png') no-repeat center;
+            background-size: cover;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            & .texto {
+                /* Estilização do texto */
+                text-align: justify;
+                color: var(--terciaria);
+                font-size: 60px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                position: absolute;
+                top: 311px;
+                left:   127px ;
+                & h1 {
+                    font-size: 96px;
+                    font-weight: 700;
+                    color: var(--terciaria);
+                    text-align: justify;
+                    margin-bottom: 20px;
+                }
+                
+                & p {
+                    font-family: 'oswald', sans-serif;
+                    font-weight: 200;
+                    font-size: 30px;
+                    color: var(--terciaria);
+                    text-align:justify;
+                    line-height: 3px;
+                    
+                }
+                
+                & a {
+                    /* Estilização do botão */  
+                    padding: 5px 50px;/* Espaçamento interno do botão */
+                    background-color: var(--secundaria);
+                    color: var(--terciaria);
+                    font-size: 24px; /* Tamanho da fonte */
+                    font-weight: 700;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-left: 15px;
+                    
+                }
+                
+            }
         }
+    }
+    & main {
+        
     }
 }
