@@ -9,4 +9,9 @@ Iniciando estilização  do projeto no CSS externo
 Estilização do topo concluida.
 Estilização de header concluida.
 -- Segundo passo estilização dos conteúdo principal.
-Estilização da seção main.  
+Estilização da seção main. 
+Estilização da seção main concluida.
+Estilização da seção footer iniciada.
+Estilização da seção footer concluida.
+-- Terceira etapa estilização para dispositivos mobile.
+ 
