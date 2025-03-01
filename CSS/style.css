@@ -1,0 +1,77 @@
+* {        /* Redefinir todas as margens e blocos para 0 */
+    padding: 0;
+    margin: 0 ; 
+    box-sizing: border-box;
+    font-family: 'oswald', sans-serif; 
+    max-width: 1440px;
+    & .link {
+        text-decoration: none;  /* Remover sublinhado do link */
+        color: var(--primaria);     /* Cor do texto */
+    }
+}
+:root{      /* Definir variáveis para as cores */
+    --primaria: #000000;    /* Preto */
+    --secundaria: #0017E9;  /* Azul */
+    --terciaria: #FFFFFF;  /* Branco */
+}
+header{     /* Estilizar o cabeçalho */
+    background: var(--terciaria);
+    margin: 0 auto;
+
+    & #topo {
+        width: 100%;
+        height: 120px;
+        display: flex;  /* Fazer com que os elementos fiquem lado a lado */
+        justify-content: space-between; /* Espaçamento entre os elementos */
+        gap: 20px;
+        flex-direction: row;    
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 20px;
+        
+
+        & .logo {
+            width: 242px;
+            font-size: 40px ;
+            font-weight: 700;
+            top: 46px;
+            margin-left: 110px;
+            }
+        }
+
+        & .navegacao {
+            display: flex;  
+            justify-content: flex-end;  /* Alinhar os elementos à direita */
+            flex: 1 2 60%;    /* Fazer com que o elemento ocupe todo o espaço disponível */
+
+            & ul {
+                display:flex;
+                justify-content: flex-end;
+                align-items: center;
+                & li {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    list-style: none;
+                    margin: 0 20px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: var(--primaria);
+                }
+            }
+        }
+
+        & .botao {
+            
+            border: 3px solid var(--primaria);
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: 700;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
