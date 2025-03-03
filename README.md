@@ -13,5 +13,7 @@ Estilização da seção main.
 Estilização da seção main concluida.
 Estilização da seção footer iniciada.
 Estilização da seção footer concluida.
+Ajuste em alguns comportamento de resposividade.
+Adição de imagem com mais qualidade.
 -- Terceira etapa estilização para dispositivos mobile.
  

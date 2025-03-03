@@ -39,7 +39,7 @@ body {
 
         & #topo {
             width: 100%;
-            height: 120px;
+            min-height: 120px;
             display: flex;  /* Fazer com que os elementos fiquem lado a lado */
             justify-content: space-between;/* Espaçamento entre os elementos */
             gap: 20px;
@@ -62,26 +62,30 @@ body {
                 justify-content: flex-end;  /* Alinhar os elementos à direita */
                 flex: 1 3 60px; /* Fazer com que o elemento ocupe todo o espaço disponível */
                 
-
-                & ul {
+                & nav {
                     display: flex;
                     justify-content: flex-end;
-                    align-items: center;
-
-                    & li {
+                    & ul {
                         display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        list-style: none;
-                        margin: 0 20px;
-                        font-size: 20px;
-                        font-weight: 700;
-                        color: var(--primaria);
+                        justify-content:flex-end ;
+                        align-items: flex-end;
+
+                        & li {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            list-style: none;
+                            margin: 0 20px;
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: var(--primaria);
+                        }
                     }
-                }
+                }    
             }
 
             & .botao {   /* Estilização do botão */
+                
                 border: 3px solid var(--primaria);  /* Borda do botão */
                 padding: 10px 30px;     /* Espaçamento interno do botão */
                 font-size: 30px;    /* Tamanho da fonte */
@@ -97,7 +101,8 @@ body {
         & .banner {     /* Estilização do banner */
             width: 100%;
             height: 634px;
-            background: url('../IMG/background.png') no-repeat center;
+            max-width: 100%;
+            background: url('../IMG/background1.png') no-repeat center;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -105,35 +110,40 @@ body {
             flex-direction: column;
 
             & .texto {   /* Estilização do texto */
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
                 color: var(--terciaria);
                 font-size: 60px;
                 font-weight: 700;
                 margin-left: 130px;
                 margin-bottom: 20px;
-                position: absolute;
+                
                 top: 311px;
                 left:   127px ;
 
                 & h1 {
+                    width: 100%;
                     font-size: 96px;
                     font-weight: 700;
                     color: var(--terciaria);
                     text-align: justify;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }
                 
                 & p {
+                    width: 100%;
                     font-family: 'oswald', sans-serif;
                     font-weight: 200;
                     font-size: 30px;
                     color: var(--terciaria);
-                    text-align:justify;
-                    line-height: 3px;
+                    margin: 0 0 10px 0;
                     
                 }
                 
                 & a {
                     /* Estilização do botão */  
+                    
                     padding: 5px 50px;/* Espaçamento interno do botão */
                     background-color: var(--secundaria);
                     color: var(--terciaria);
@@ -153,12 +163,13 @@ body {
         
         & #sobre {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex; /* Fazer com que os elementos fiquem lado a lado */
+            flex-wrap: wrap;
             justify-content: space-between; /* Espaçamento entre os elementos */
 
             & .conteudo {
-                display: block;
+                
                 width: 679px;
                 height: 732px;
                 padding: 20px 70px ;
