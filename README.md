@@ -16,4 +16,5 @@ Estilização da seção footer concluida.
 Ajuste em alguns comportamento de resposividade.
 Adição de imagem com mais qualidade.
 -- Terceira etapa estilização para dispositivos mobile.
+Terminar mudanças no media query do banner.
  
