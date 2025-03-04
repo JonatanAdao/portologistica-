@@ -14,23 +14,29 @@
     }
 }
 
-:root {/* Definir variáveis para as cores */
-    --primaria: #000000;    /* Preto */
-    --secundaria: #0017E9;      /* Azul */
-    --terciaria: #FFFFFF;   /* Branco */
-    
+:root {
+    /* Definir variáveis para as cores */
+    --primaria: #000000;
+    /* Preto */
+    --secundaria: #0017E9;
+    /* Azul */
+    --terciaria: #FFFFFF;
+    /* Branco */
+
 }
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    background-color: var(--terciaria);
+
     & header {
         /* Estilizar o cabeçalho */
         background: var(--terciaria);
@@ -40,65 +46,58 @@ body {
         & #topo {
             width: 100%;
             min-height: 120px;
-            display: flex;  /* Fazer com que os elementos fiquem lado a lado */
-            justify-content: space-between;/* Espaçamento entre os elementos */
+            display: flex;       /* Fazer com que os elementos fiquem lado a lado */
+            justify-content: space-around;       /* Espaçamento entre os elementos */           
             gap: 20px;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             padding: 0 20px;
 
-
             & .logo {
                 width: 242px;
                 font-size: 40px;
                 font-weight: 700;
                 top: 46px;
-                margin-left: 110px;
+                margin-left: 100px;
             }
 
-            & .navegacao {
+            & #navegacao {
                 display: flex;
-                justify-content: flex-end;  /* Alinhar os elementos à direita */
-                flex: 1 3 60px; /* Fazer com que o elemento ocupe todo o espaço disponível */
-                
-                & nav {
+                justify-content:center;     
+                align-items: center;
+                margin-right: 0;           
+
+                & ul { 
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: flex-end;
-                    & ul {
+                    align-items: center;
+
+                    & li {
                         display: flex;
-                        justify-content:flex-end ;
-                        align-items: flex-end;
+                        margin: 0 20px;
+                        font-size: 20px;
+                        font-weight: 700;
 
-                        & li {
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: flex-end;
-                            list-style: none;
-                            margin: 0 20px;
-                            font-size: 20px;
+                        & .botao {
+                            /* Estilização do botão */
+                            border: 3px solid var(--primaria); /* Borda do botão */
+                            padding: 10px 40px;     /* Espaçamento interno do botão */
+                            font-size: 40px;         /* Tamanho da fonte */               
                             font-weight: 700;
-                            color: var(--primaria);
-                        }
+                            cursor: pointer;
+                            margin: 10px 40px;
+
+                            display: flex;
+                            flex-wrap: wrap;
+                        }  
                     }
-                }    
-            }
-
-            & .botao {   /* Estilização do botão */
-                
-                border: 3px solid var(--primaria);  /* Borda do botão */
-                padding: 10px 30px;     /* Espaçamento interno do botão */
-                font-size: 30px;    /* Tamanho da fonte */
-                font-weight: 700;
-                cursor: pointer;
-
-                display: flex;
-                flex: 0 1 70px;     /* Fazer com que o botão ocupe apenas o espaço necessário */
-                justify-content: flex-end;
-            }
+                }
+            }           
         }
-
-        & .banner {     /* Estilização do banner */
+        & .banner {
+            /* Estilização do banner */
             width: 100%;
             height: 634px;
             background: url('../IMG/background1.png') no-repeat center;
@@ -107,8 +106,9 @@ body {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-
-            & .texto {   /* Estilização do texto */
+            
+            & .texto {
+                /* Estilização do texto */
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
@@ -119,8 +119,8 @@ body {
                 margin-bottom: 20px;
                 
                 top: 311px;
-                left:   127px ;
-
+                left: 127px;
+                
                 & h1 {
                     width: 100%;
                     font-size: 96px;
@@ -141,12 +141,14 @@ body {
                 }
                 
                 & a {
-                    /* Estilização do botão */  
+                    /* Estilização do botão */
                     
-                    padding: 5px 50px;/* Espaçamento interno do botão */
+                    padding: 5px 50px;
+                    /* Espaçamento interno do botão */
                     background-color: var(--secundaria);
                     color: var(--terciaria);
-                    font-size: 24px; /* Tamanho da fonte */
+                    font-size: 24px;
+                    /* Tamanho da fonte */
                     font-weight: 700;
                     text-decoration: none;
                     cursor: pointer;
@@ -157,28 +159,28 @@ body {
             }
         }
     }
+    
     & main {
         width: 100%;
         
         & #sobre {
             width: 100%;
             min-height: 100vh;
-            display: flex; /* Fazer com que os elementos fiquem lado a lado */
+            display: flex;       /* Fazer com que os elementos fiquem lado a lado */
             flex-wrap: wrap;
-            justify-content: space-between; /* Espaçamento entre os elementos */
-
+            justify-content: space-between;     /* Espaçamento entre os elementos */
+            
             & .conteudo {
-                
                 width: 679px;
                 height: 732px;
-                padding: 20px 70px ;
-                margin: 0px 30px 70px 30px;    /* Espaçamento interno do conteúdo */
-                
+                padding: 20px 70px;
+                margin: 0px 30px 70px 30px;     /* Espaçamento interno do conteúdo */   
+
                 & h2 {
                     font-size: 24px;
                     font-weight: 500;
                     color: var(--secundaria);
-                    margin:  60px 0px;
+                    margin: 60px 0px;
                     line-height: 36px;
                 }
 
@@ -199,16 +201,17 @@ body {
                     margin-bottom: 30px;
                     line-height: 29px;
                 }
-                
-                & a {   /* Estilização do botão */
-                    
+
+                & a {
+                    /* Estilização do botão */
                     color: var(--secundaria);
                     text-decoration: none;
                     margin-left: 30px;
                 }
             }
 
-            & .img-sobre {  /*Estilização dos elemento de imagem*/
+            & .img-sobre {
+                /*Estilização dos elemento de imagem*/
                 & img {
                     width: 679px;
                     height: 732px;
@@ -226,7 +229,6 @@ body {
             align-items: center;
             padding: 50px 20px 90px 20px;
             margin-bottom: 50px;
-            ;
 
             & h2 {
                 color: var(--secundaria);
@@ -234,14 +236,14 @@ body {
                 font-size: 24px;
                 padding-bottom: 30px;
             }
-
+            
             & h3 {
                 text-align: center;
                 font-size: 24px;
                 padding-bottom: 50px;
             }
 
-            & .cards{
+            & .cards {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
@@ -259,13 +261,13 @@ body {
                     & img {
                         width: 367px;
                         height: 259px;
-                    
                     }
+
                     & h4, p {
                         padding: 20px;
                         font-size: 24px;
-                    
                     }
+
                     & p {
                         font-weight: 200;
                     }
@@ -282,19 +284,18 @@ body {
             justify-content: space-around;
             margin-bottom: 30px;
 
-            & h2{
+            & h2 {
                 color: var(--secundaria);
                 font-family: 32px;
                 font-weight: 500;
-                
-                
             }
+
             & h3 {
-                
                 font-family: 32px;
                 font-weight: 500;
                 margin-bottom: 20px;
             }
+
             & .atendimento {
                 width: 100%;
                 height: 100vh;
@@ -302,12 +303,12 @@ body {
                 flex-wrap: wrap;
                 flex-direction: column;
                 justify-content: center;
-                
+
                 gap: 10px;
                 padding: 20px 0;
                 margin-top: 20px;
                 margin-bottom: 20px;
-                
+
                 & p {
                     font-size: 24px;
                     font-weight: 400;
@@ -331,7 +332,7 @@ body {
                     margin-top: 150px;
                     max-width: 400px;
                     padding: 20px;
-                    
+
                     & label {
                         display: block;
                         margin-top: 20px;
@@ -341,6 +342,7 @@ body {
                         font-weight: 300;
                         line-height: 30px;
                     }
+
                     & input, textarea {
                         width: 100%;
                         height: 70px;
@@ -348,6 +350,7 @@ body {
                         margin-top: 15px;
                         border: 1px solid #ccc;
                     }
+
                     & button {
                         width: 100%;
                         font-size: 24px;
@@ -360,10 +363,10 @@ body {
                     }
                 }
             }
-
+            
         }
     }
-
+    
     & footer {
         width: 100%;
         text-align: center;
@@ -372,26 +375,36 @@ body {
         padding: 10px;
     }
 }
+
 @media screen and (max-width: 768px) {
     body {
         margin: 0 auto;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        & .logo{
-            max-width: 110px;
+
+        & .topo {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        & .logo {
+            max-width: 242px;
             display: flex;
             justify-content: center;
-        
+            font-size: 40px;
+            font-weight: 700;
+            top: 46px;
+            margin-left: auto;
+        }
         & .banner {
-        width: 600px;
-
+            width: 600px;
+            & .texto {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
         }
-
-            
-
-        }
-
     }
-
 }
