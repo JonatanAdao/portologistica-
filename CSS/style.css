@@ -7,22 +7,17 @@
     max-width: 1440px;
 
     & .link {
-        text-decoration: none;
-        /* Remover sublinhado do link */
-        color: var(--primaria);
-        /* Cor do texto */
+        text-decoration: none;       /* Remover sublinhado do link */
+        color: var(--primaria);     /* Cor do texto */
+        
     }
 }
 
 :root {
     /* Definir variáveis para as cores */
-    --primaria: #000000;
-    /* Preto */
-    --secundaria: #0017E9;
-    /* Azul */
-    --terciaria: #FFFFFF;
-    /* Branco */
-
+    --primaria: #000000;         /* Preto */
+    --secundaria: #0017E9;      /* Azul */
+    --terciaria: #FFFFFF;       /* Branco */
 }
 
 html {
@@ -64,9 +59,10 @@ body {
 
             & #navegacao {
                 display: flex;
-                justify-content:center;     
+                justify-content: center;     
                 align-items: center;
-                margin-right: 0;           
+                flex-wrap: wrap;
+                gap: 10px;     
 
                 & ul { 
                     display: flex;
@@ -79,20 +75,17 @@ body {
                         margin: 0 20px;
                         font-size: 20px;
                         font-weight: 700;
-
-                        & .botao {
-                            /* Estilização do botão */
-                            border: 3px solid var(--primaria); /* Borda do botão */
-                            padding: 10px 40px;     /* Espaçamento interno do botão */
-                            font-size: 40px;         /* Tamanho da fonte */               
-                            font-weight: 700;
-                            cursor: pointer;
-                            margin: 10px 40px;
-
-                            display: flex;
                             flex-wrap: wrap;
                         }  
                     }
+                & .botao {
+                    /* Estilização do botão */
+                    border: 3px solid var(--primaria); /* Borda do botão */
+                    padding: 10px 40px;     /* Espaçamento interno do botão */
+                    font-size: 30px;         /* Tamanho da fonte */               
+                    font-weight: 700;
+                    cursor: pointer;
+                    margin: 10px 40px;
                 }
             }           
         }
@@ -374,37 +367,103 @@ body {
         margin-bottom: 10px;
         padding: 10px;
     }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        margin: 0 auto;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-
-        & .topo {
+    @media screen and (max-width: 768px) {
+        * {
+            max-width: 100%;
+        }
+    
+        #topo {
+            padding: 10px;
             display: flex;
             flex-direction: column;
-            
-        }
-
-        & .logo {
-            max-width: 242px;
-            display: flex;
             justify-content: center;
-            font-size: 40px;
-            font-weight: 700;
-            top: 46px;
-            margin-left: auto;
+            align-items: center;
+            & .logo {
+                display: none;
+            }
+    
+            & #navegacao {
+                
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                
+                & .botao {
+                    margin: 5px;
+                    padding: 5px 20px;
+                    font-size: 20px;
+                }
+            }
         }
-        & .banner {
-            width: 600px;
+    
+        .banner {
+            height: auto;
+            padding: 20px;
+    
             & .texto {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
+                margin-left: 0;
+                text-align: center;
+    
+                & h1 {
+                    font-size: 48px;
+                }
+    
+                & p {
+                    font-size: 24px;
+                }
+    
+                & a {
+                    margin-left: 0;
+                    padding: 5px 30px;
+                }
+            }
+        }
+    
+        #sobre {
+            & .conteudo {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+    
+            & .img-sobre img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    
+        #servicos {
+            & .cards {
+                & .box {
+                    width: 100%;
+                    height: auto;
+                    
+                    & img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    
+        #contato {
+            & .atendimento {
+                height: auto;
+                text-align: center;
+    
+                & .img-atendimento {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    
+            & .fale-conosco form {
+                height: auto;
+                margin-top: 30px;
             }
         }
     }
+    
 }
+
+        
